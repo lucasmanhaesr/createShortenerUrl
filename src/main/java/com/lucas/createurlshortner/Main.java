@@ -19,11 +19,11 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Obj
         //Desserializando o body para obter os valores passado na requisição
         Map<String, String> bodyMap;
 
-        //inicializando a classe ObjectMapper
-        ObjectMapper objectMapper = new ObjectMapper();
-
         //Fazendo try catch pois os campos do body podem vir corretos,errados ou nulos
         try{
+            //inicializando a classe ObjectMapper
+            ObjectMapper objectMapper = new ObjectMapper();
+
             //transformando a String body em um Map, usando a classe ObjectMapper
             bodyMap = objectMapper.readValue(body, Map.class);
         } catch (JsonProcessingException exception){
