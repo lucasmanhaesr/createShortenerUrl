@@ -1,4 +1,4 @@
-package com.lucas.createurlshortner.model;
+package com.lucas.generateshortenerurl.model;
 
 import lombok.Data;
 
